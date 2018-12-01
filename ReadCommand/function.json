@@ -1,0 +1,22 @@
+{
+  "bindings": [
+    {
+      "name": "myQueueItem",
+      "type": "serviceBusTrigger",
+      "direction": "in",
+      "queueName": "iotservicebus",
+      "connection": "IotHub_Key",
+      "accessRights": "Manage"
+    },
+    {
+      "type": "documentDB",
+      "name": "outputDocument",
+      "databaseName": "CosmosDB_Name",
+      "collectionName": "CosmosDB_Collection_Name",
+      "createIfNotExists": false,
+      "connection": "CosmosDB_Key",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}
