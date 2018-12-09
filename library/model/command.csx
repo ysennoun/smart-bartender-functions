@@ -6,8 +6,14 @@ public class Command
     public Int32 servedTime { get; set; }
     public Int32 durationToServe { get; set; }
     public string table { get; set; }
-    public string drink { get; set; }
+    public List<Prediction> predictions { get; set; }
     public string status { get; set; }
+}
+
+public class Prediction
+{
+    public string prediction { get; set; }
+    public float score { get; set; }
 }
 
 public class CommandToReturn
